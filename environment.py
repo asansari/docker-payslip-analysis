@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 """
-    __name__: barplot.py
-    __description__: Different ways to plot graphs
+    __name__: environment.py
+    __description__: Script to setup environment related stuffs
     __author__: Abdurrahman Ansari
     __version__: 1.0
     __created__: 2020-04-19
@@ -31,8 +31,8 @@ class Env:
         # Create handlers
         c_handler = logging.StreamHandler()
         f_handler = logging.FileHandler(log_path)
-        # c_handler.setLevel(logging.DEBUG)
-        # f_handler.setLevel(logging.DEBUG)
+        c_handler.setLevel(logging.DEBUG)
+        f_handler.setLevel(logging.DEBUG)
 
         # Create formatters and add it to handlers
         format_str = "%(asctime)s - [%(filename)s:%(lineno)s - %(funcName)20s()] - %(levelname)s - %(message)s"
@@ -43,7 +43,7 @@ class Env:
 
         # Add handlers to the logger
         logger.addHandler(c_handler)
-        # logger.addHandler(f_handler)
+        logger.addHandler(f_handler)
 
         logger.setLevel(logging.DEBUG)
 
