@@ -7,6 +7,9 @@ The project was created to automate the process of analyzing the trend of the sa
        * Deductions
    * Create a bar-plot and side-by-side graphs
 
+# Usage
+   * Create a ./PDF/ directory and copy all the payslips (.pdf) in it 
+
 
 # Docker
 We need Python and Java (tabula-py) for reading parsing the PDFs. Slim versions of Debian Buster base images have been
@@ -23,7 +26,7 @@ used for a smaller footprint
 
 * Build an image
     * Use the following command to build an image
-      * `docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg VCS_REF='asansari/payslip-analysis' --build-arg BUILD_VERSION='1.0' -t payslip-analysis:1.0 .`
+      * `docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg VCS_REF='asansari/docker-payslip-analysis' --build-arg BUILD_VERSION='1.0' -t payslip-analysis:1.0 .`
     * The labels can be commented in the Dockerfile to reduce the number of layers
 
 * Create and run within  a container
